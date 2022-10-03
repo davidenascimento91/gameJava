@@ -25,8 +25,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
   @Override
   public void mousePressed(MouseEvent e) {
-    gamePanel.changeRectColor();
-    System.out.println("mouse press");
+
     // TODO Auto-generated method stub
 
   }
@@ -56,7 +55,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
   @Override
   public void mouseMoved(MouseEvent e) {
-    gamePanel.setRectPos(e.getX(), e.getY());
+
     System.out.println("mouse Move");
 
   }
