@@ -6,20 +6,25 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 
+import src.entities.Player;
 import src.main.GamePanel;
 
 public class MouseInputs implements MouseListener, MouseMotionListener {
 
   private GamePanel gamePanel;
+  private Player player;
 
   public MouseInputs(GamePanel gamePanel) {
     this.gamePanel = gamePanel;
+    this.player = gamePanel.getGame().getPlayer();
 
   }
 
   @Override
   public void mouseClicked(MouseEvent e) {
-    // TODO Auto-generated method stub
+    if (e.getButton() == MouseEvent.BUTTON1) {
+      player.setAttack(true);
+    }
 
   }
 
