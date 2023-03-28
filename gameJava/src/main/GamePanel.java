@@ -33,6 +33,12 @@ public class GamePanel extends JPanel {
     addMouseMotionListener(mouseInputs);
   }
 
+  public void updateGame() {
+    updateAnimationTick();
+    setAnimation();
+    updatePos();
+  }
+
   private void loadAnimations() {
     animations = new BufferedImage[9][6];
     for (int j = 0; j < animations.length; j++) {
@@ -70,9 +76,6 @@ public class GamePanel extends JPanel {
 
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
-    updateAnimationTick();
-    setAnimation();
-    updatePos();
     g.drawImage(animations[playerAction][animationIndex], (int) xDelta, (int) yDelta, 256, 160, null);
 
   }
